@@ -85,7 +85,7 @@ public class MainActivity extends ActionBarActivity implements RegistrationDialo
     private DrawerListCustomAdapter drawerListCustomAdapter;
     static final int LOGIN_REQUEST = 1;
     static final int CHANGE_LANGUAGE_REQUEST = 2;
-    public static String username="admin",password="district",orgUnit="";
+    public static String username="community",password="C0mmunity",orgUnit="";
     private static final String ORGANISATION_UNIT="org_unit";
     private SharedPreferences sharedpreferences;
     public static List<Program> programs = new ArrayList<>();
