@@ -22,6 +22,12 @@ This project uses other android open source libraries such as:
 * [FloatingActionButton](https://github.com/makovkastar/FloatingActionButton)
 * [Androd-InApp-Feedback](http://www.android-feedback.com)
 
+
+
+### Known Issues ###
+
+* The user registration mechanism on mobile should include an sms verification means of the users phone number
+
 ### Who do I talk to? ###
 
 * Repo owner or admin

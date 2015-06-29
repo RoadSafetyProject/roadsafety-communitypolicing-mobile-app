@@ -1,0 +1,223 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+        <LinearLayout
+            android:id="@+id/fill_orders"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:paddingTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_dvs"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:id="@+id/verification_title"
+                android:fontFamily="@string/font_fontFamily_drawer_item"
+                android:text="@string/form_send_order_text"/>
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/dark_dvs"
+                    android:layout_height="wrap_content"
+                    android:text="Namba mpya ya MSD"/>
+                <EditText
+                    android:id="@+id/msd_number_edit_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:textSize="15sp"
+                    android:hint="Eg.1232100"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/dark_dvs"
+                    android:text="Maelezo ya bidhaa"/>
+                <EditText
+                    android:id="@+id/drug_type_edit_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:textSize="15sp"
+                    android:hint="Eg.Paracetamol Tabs 500gm"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/dark_dvs"
+                    android:layout_height="wrap_content"
+                    android:text="Kipimo cha Ugavi (U)"/>
+                <EditText
+                    android:id="@+id/kipimo_ugavi"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:textSize="15sp"
+                    android:layout_height="48dp"
+                    android:hint="Eg.100 tablets"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/dark_dvs"
+                    android:layout_height="wrap_content"
+                    android:text="Kiasi Cha kuanzia"/>
+                <EditText
+                    android:id="@+id/kiasi_chakuanzia"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/fragment_order_requests_number_of_units_hint"
+                    android:textColorHint="@color/gray"
+                    android:textSize="15sp"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/dark_dvs"
+                    android:layout_height="wrap_content"
+                    android:text="Upotevu au Marekebisho"/>
+
+                <EditText
+                    android:id="@+id/upotevu"
+                    android:hint="Weka marekebisho hapa"
+                    android:textColorHint="@color/gray"
+                    android:layout_width="fill_parent"
+                    android:gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:lines="3" />
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/dark_dvs"
+                    android:layout_height="wrap_content"
+                    android:text="Siku ambazo dawa hazikuwepo"/>
+
+                <EditText
+                    android:id="@+id/dawa_hazikuwepo"
+                    android:hint="Eg.3"
+                    android:textColorHint="@color/gray"
+                    android:layout_width="fill_parent"
+                    android:gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:lines="1" />
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/dark_dvs"
+                    android:layout_height="wrap_content"
+                    android:text="Bei tya dawa"/>
+
+                <EditText
+                    android:id="@+id/bei_dawa"
+                    android:hint="Eg. 20300"
+                    android:textColorHint="@color/gray"
+                    android:layout_width="fill_parent"
+                    android:gravity="bottom"
+                    android:layout_height="wrap_content"
+                    android:singleLine="false"
+                    android:lines="1" />
+            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                style="@style/CardViewStyle"
+                cardCornerRadius="4dp"
+                android:id="@+id/order_requests_button"
+                android:clickable="true"
+                android:elevation="8dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/dark_dvs">
+                    <wappi.iRoadCommunityPolicing.Utils.CustomView
+                        android:visibility="invisible"
+                        android:id="@+id/progressBarCircularIndetermininate"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/dark_dvs" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/fragment_order_requests_send_button_text"
+                        android:gravity="center"
+                        android:textSize="22sp"
+                        android:id="@+id/send_order_button_text"
+                        android:fontFamily="@style/TextAppearance.AppCompat.Title"
+                        android:background="@color/dark_dvs"
+                        android:textColor="@color/white"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/response"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_black"
+                android:textSize="18sp"
+                android:id="@+id/message"
+                android:fontFamily="@style/TextAppearance.AppCompat.Title"
+                android:text="@string/fragment_verification_text"/>
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="12dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                style="@style/CardViewStyle"
+                cardCornerRadius="4dp"
+                android:id="@+id/OK_button"
+                android:clickable="true"
+                android:elevation="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/ok_button"
+                    android:gravity="center"
+                    android:textSize="22sp"
+                    android:fontFamily="@style/TextAppearance.AppCompat.Title"
+                    android:background="@color/dark_dvs"
+                    android:textColor="@color/white"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"/>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

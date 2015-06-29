@@ -1,0 +1,31 @@
+<resources>
+
+    <style name="Theme.MyAppTheme" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/light_dvs</item>
+        <item name="colorPrimaryDark">@color/dark_dvs</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorAccent">@color/gray</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@drawable/ab_solid_shadow_holo</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>0
+    </style>
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="CardViewStyle" parent="android:Widget.TextView">
+        <item name="android:foreground">@drawable/card</item>
+    </style>
+
+    <style name="dialogue_animation">
+        <item name="android:windowEnterAnimation">
+            @anim/activity_slide_in_left
+        </item>
+        <item name="android:windowExitAnimation">
+            @anim/activity_slide_out_right
+        </item>
+    </style>
+
+</resources>

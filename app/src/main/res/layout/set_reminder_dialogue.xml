@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryDark"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:id="@+id/select_starting_time"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="24dp"
+        android:layout_below="@id/toolbar"
+        android:layout_width="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/dark_dvs"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Starting time"/>
+    <EditText
+        android:id="@+id/starting_time_edit_text"
+        android:layout_below="@id/select_starting_time"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Starting time"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/date_picker"
+        android:layout_below="@id/select_starting_time"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_width="80dp"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Pick"
+        android:background="@color/dark_dvs"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_height="36dp"/>
+    <TextView
+        android:id="@+id/hours_title"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="18dp"
+        android:textColor="@color/dark_dvs"
+        android:textStyle="bold"
+        android:layout_marginRight="24dp"
+        android:layout_below="@id/starting_time_edit_text"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:text="Hours between dosage"/>
+    <EditText
+        android:id="@+id/hours"
+        android:layout_below="@id/hours_title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_width="match_parent"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"
+        android:hint="Enter hours"/>
+    <TextView
+        android:id="@+id/number_of_days_title"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="24dp"
+        android:layout_below="@id/hours"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textColor="@color/dark_dvs"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Number Of Days"/>
+    <EditText
+        android:id="@+id/number_of_days"
+        android:layout_below="@id/number_of_days_title"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="24dp"
+        android:layout_width="match_parent"
+        android:inputType="numberDecimal"
+        android:layout_height="wrap_content"
+        android:hint="Enter days"/>
+    <TextView
+        android:id="@+id/cancel_button"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/number_of_days"
+        android:layout_width="80dp"
+        android:textColor="@color/white"
+        android:layout_height="36dp"
+        android:textSize="18sp"
+        android:text="CANCEL"
+        android:textStyle="bold"
+        android:fontFamily="@string/font_fontFamily_drawer_item"
+        android:background="@color/dark_dvs"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/ok_button"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="12dp"
+        android:layout_toLeftOf="@id/cancel_button"
+        android:layout_below="@id/number_of_days"
+        android:layout_width="80dp"
+        android:textColor="@color/white"
+        android:layout_height="36dp"
+        android:textSize="18sp"
+        android:text="SET"
+        android:textStyle="bold"
+        android:fontFamily="@string/font_fontFamily_drawer_item"
+        android:background="@color/dark_dvs"
+        android:gravity="center"/>
+
+</RelativeLayout>

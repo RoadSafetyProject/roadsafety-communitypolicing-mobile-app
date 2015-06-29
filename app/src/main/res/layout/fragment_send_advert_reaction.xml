@@ -1,0 +1,204 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/fill_orders"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp"
+                android:paddingTop="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_dvs"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:id="@+id/verification_title"
+                android:fontFamily="@string/font_fontFamily_drawer_item"
+                android:text="Please fill the form below to send an Advert Reaction Report"/>
+            <LinearLayout
+                android:layout_marginTop="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_dvs"
+                    android:text="Medical Drug Information"/>
+                <TextView
+                    android:layout_marginTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/light_dvs"
+                    android:layout_height="wrap_content"
+                    android:text="Drug Name"/>
+                <EditText
+                    android:id="@+id/drug_name"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="15sp"
+                    android:hint="Enter the drug name"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_dvs"
+                    android:text="Drug Manufacturer Company"/>
+                <EditText
+                    android:id="@+id/drug_company_edit_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="15sp"
+                    android:hint="Enter the drug company"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_dvs"
+                    android:text="Drug Scratch Code Number"/>
+                <EditText
+                    android:id="@+id/drug_sratch_code_edit_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="15sp"
+                    android:hint="Enter the scratch code found on the medicine"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_dvs"
+                    android:text="Adverse Reaction Description"/>
+                <EditText
+                    android:id="@+id/adverse_reaction_edit_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:gravity="start"
+                    android:singleLine="false"
+                    android:lines="3"
+                    android:background="@null"
+                    android:hint="Describe the Adverse reaction"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#d5d5d5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/dark_dvs"
+                    android:text="Personal Information"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/light_dvs"
+                    android:layout_height="wrap_content"
+                    android:text="Name"/>
+                <EditText
+                    android:id="@+id/drug_name_edit_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="15sp"
+                    android:hint="Enter your full name"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_dvs"
+                    android:text="Age"/>
+                <EditText
+                    android:id="@+id/drug_type_edit_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="15sp"
+                    android:hint="Enter your age"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/light_dvs"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number"/>
+                <EditText
+                    android:id="@+id/volume_per_unit_edit_text"
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:textSize="15sp"
+                    android:layout_height="40dp"
+                    android:hint="Enter your Phone number"
+                    android:textColorHint="@color/gray"
+                    android:textColor="@color/gray"/>
+
+            </LinearLayout>
+            <android.support.v7.widget.CardView
+                android:layout_marginTop="32dp"
+                android:layout_marginLeft="16dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                style="@style/CardViewStyle"
+                cardCornerRadius="4dp"
+                android:id="@+id/order_requests_button"
+                android:clickable="true"
+                android:elevation="8dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_dvs">
+                    <wappi.iRoadCommunityPolicing.Utils.CustomView
+                        android:visibility="invisible"
+                        android:id="@+id/progressBarCircularIndetermininate"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/light_dvs" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/fragment_order_requests_send_button_text"
+                        android:gravity="center"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:id="@+id/send_order_button_text"
+                        android:fontFamily="@style/TextAppearance.AppCompat.Title"
+                        android:background="@color/light_dvs"
+                        android:textColor="@color/white"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

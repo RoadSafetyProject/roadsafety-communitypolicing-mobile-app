@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp">
+    <TextView
+        android:id="@+id/tip_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kuhusu Loremipsum"
+        android:layout_marginBottom="8dp"
+        android:textSize="18sp"
+        android:textColor="@color/black"/>
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tip_title_desc"
+        android:text="@string/loremipsum"
+        android:maxLines="8"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
+
+
+
+</LinearLayout>

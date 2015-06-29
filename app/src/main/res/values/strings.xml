@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/apk/res/com.cardsui.example">
+
+    <string name="app_name">iRoad Community Policing</string>
+    <string name="menu_settings" translatable="false">Settings</string>
+    <string name="drawer_open" translatable="false">Menu</string>
+    <string name="drawer_close" translatable="false">DVS</string>
+
+    <!-- Settings Strings -->
+    <string name="settings_default_language_title" translatable="false">Default Language</string>
+    <string name="settings_change_default_language_button" translatable="false">Change your Default language</string>
+    <string name="settings_login_DVS" translatable="false">Account</string>
+    <string name="settings_login_description" translatable="false">Log in to your DVS account</string>
+    <string name="settings_logout_DVS" translatable="false">Account</string>
+    <string name="settings_logout_description" translatable="false">Logout DVS account</string>
+    <string name="settings_password_description">Modify your DVS password</string>
+
+    <!-- Events -->
+    <string name="fragment_verification_text" translatable="false">To verify a medical Drug, enter the scratch code found on the Drug container in the field below.</string>
+    <string name="fragment_activation_text" translatable="false">To activate medical drugs, hit the activate button below and scan the QR Code found on the medical drug box.</string>
+    <string name="fragment_send_order_text" translatable="false">Please fill the medical form below to send Order Information to MSD</string>
+    <string name="form_send_order_text" translatable="false">Please fill the ADR form below to send Order Information to MSD</string>
+    <string name="verify">Verify</string>
+    <string name="activate" translatable="false">Activate</string>
+    <string name="scan" translatable="false">scan</string>
+    <string name="ok_button" translatable="false">OK</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="verification_hint">Enter Scratch Code</string>
+    <string name="set_default_language" translatable="false">Please Select your default Language</string>
+    <string name="dialogue_title_language_chooser">Choose The default Language</string>
+    <string name="dialogue_title_change_password">Change Password</string>
+    <string name="dialogue_order_information_successfully_sent" translatable="false">Your order information has successfully been sent</string>
+    <string name="dialogue_order_information_sending_failed" translatable="false">Failed to send Your order information.</string>
+    <string name="settings_general_title" translatable="false">General</string>
+    <string name="settings_account" translatable="false">Account Settings</string>
+    <string name="change_password_current_password">Enter your current Password</string>
+    <string name="change_password_new_password">Enter the new Password</string>
+    <string name="change_password_comfirm_new_password">Confirm the new Password</string>
+    <string name="fragment_order_requests_drug_name_title_text" translatable="false">Medical Drug Name</string>
+    <string name="fragment_order_requests_drug_name_hint" translatable="false">E.g Paracetamol</string>
+    <string name="fragment_order_requests_drug_type_title_text" translatable="false">Medical Drug Type</string>
+    <string name="fragment_order_requests_drug_type_hint" translatable="false">E.g tablets</string>
+    <string name="fragment_order_requests_volume_per_unit_title_text" translatable="false">Volume per Unit</string>
+    <string name="fragment_order_requests_volume_per_unit_hint" translatable="false">E.g 600 blisters/box</string>
+    <string name="fragment_order_requests_number_of_units_title_text" translatable="false">Number of Units</string>
+    <string name="fragment_order_requests_number_of_units_hint" translatable="false">E.g 10 boxes</string>
+    <string name="fragment_order_requests_additional_comments_title_text" translatable="false">Additional Comments</string>
+    <string name="fragment_order_requests_additional_comments_hint" translatable="false">Enter any additional comments here</string>
+    <string name="fragment_order_requests_send_button_text">Send</string>
+    <string name="toast_Sending_order_failed">Sending Order information Failed.</string>
+    <string name="toast_activating_medical_drug_failed" translatable="false">Medical Drug Activation Failed.</string>
+    <string name="toast_verification_of_medical_drug_failed" translatable="false">Medical Drug Verification Failed.</string>
+    <string name="toast_enter_the_code">Please enter the Code</string>
+    <string name="toast_fill_all_fields">Please fill all fields</string>
+    <string name="toast_password_missmatch" translatable="false">Confirmation Password does not match the new password</string>
+    <string name="toast_rescan_qr_code" translatable="false">Please rescan the QR-CODE</string>
+    <string name="toast_password_changed_successfully" translatable="false">Your new password has been saved successfully </string>
+    <string name="toast_password_changed_failed" translatable="false">Password changing failed</string>
+    <string name="toast_logged_out" translatable="false">You have successfully Logged out of DVS</string>
+    <string name="toast_log_in_to_change_password">Please login to DVS first</string>
+    <string name="feedback_comments">Type your feedback here...</string>
+    <string name="feedback_toast">Thank you so much!</string>
+    <string name="feedback_close_button">Close</string>
+    <string name="feedback_rate_button" translatable="false">RATE!</string>
+    <string name="feedback_reply_title">From DVS Developers</string>
+    <string name="feedback_text" translatable="false">Thank you for using DVS. We would love to hear from you. Leave a comment to help us improve your experience</string>
+    <string name="log_in_text">Log In</string>
+
+    <string-array name="drawer_list" translatable="false">
+        <item>Community Policing</item>
+        <item>Hospitals, Police and Fire Stations </item>
+        <item>Send Feedback</item>
+    </string-array>
+
+    <!-- QR code utils resources -->
+    <string name="capture_name" translatable="false">QR Code Capture</string>
+    <string name="encoder_name" translatable="false">QR Code Encoder</string>
+    <string name="decoder_name" translatable="false">QR Code Decoder</string>
+    <string name="contents_contact" translatable="false">Contact info</string>
+    <string name="contents_email">Email address</string>
+    <string name="contents_password">Password</string>
+    <string name="contents_location" translatable="false">Geographic coordinates</string>
+    <string name="contents_phone" translatable="false">Phone number</string>
+    <string name="contents_sms" translatable="false">SMS address</string>
+    <string name="contents_text" translatable="false">Plain text</string>
+    <string name="msg_default_contents" translatable="false">Contents</string>
+    <string name="msg_default_format" translatable="false">Format</string>
+    <string name="msg_default_meta" translatable="false">Metadata</string>
+    <string name="msg_default_mms_subject" translatable="false">Hi</string>
+    <string name="msg_default_status" translatable="false">Place QR CODE on the medical Drug container inside the viewfinder rectangle to scan it.</string>
+    <string name="msg_default_time" translatable="false">Time</string>
+    <string name="msg_default_type" translatable="false">Type</string>
+    <string name="result_address_book" translatable="false">Found contact info</string>
+    <string name="result_calendar" translatable="false">Found calendar event</string>
+    <string name="result_email_address" translatable="false">Found email address</string>
+    <string name="result_geo" translatable="false">Found geographic coordinates</string>
+    <string name="result_isbn" translatable="false">Found book</string>
+    <string name="result_product" translatable="false">Found product</string>
+    <string name="result_sms" translatable="false">Found SMS address</string>
+    <string name="result_tel" translatable="false">Found phone number</string>
+    <string name="result_text" translatable="false">Found plain text</string>
+    <string name="result_uri" translatable="false">Found URL</string>
+    <string name="result_wifi" translatable="false">Found WLAN Configuration</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="settings_password">Password</string>
+    <string name="title_activity_health_tips_fragment" translatable="false">HealthTipsFragment</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="loremipsum" translatable="false">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper, turpis sit amet iaculis consequat, felis tortor tristique diam, non suscipit nisi tellus sed tellus. Proin metus turpis, mollis at fringilla sed, aliquam ac enim. Quisque quis mollis sem, vel iaculis mauris. Sed dapibus eu tellus sed maximus. Vestibulum vitae pellentesque est. Integer at laoreet nulla. Mauris facilisis purus ac pharetra euismod. Quisque hendrerit vehicula lobortis. Etiam pulvinar, enim eget eleifend euismod, ex mauris cursus nunc, quis efficitur turpis ante ut turpis.</string>
+
+
+    <string name="test_responce_message" translatable="false">Panadol verified with the scratch code 94234556 is Genuine and safe for Use.</string>
+    <string name="test_responce_dossage" translatable="false">For Adults and children older than 14years old please take two tablets of panadol three times a day (2*3)\n\nFor Children from 5 years to 13 years old please take 1 tablets of panadol three times a day. (1*3)\n\n For children less than 5 years old please give the child half a tablet of panadol three times a day. (0.5*3)</string>
+</resources>

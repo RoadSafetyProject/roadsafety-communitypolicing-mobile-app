@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="2dp">
+        <RelativeLayout
+            android:id="@+id/card_inner_relative"
+            android:layout_width="match_parent"
+            android:background="@color/dark_dvs"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/card_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_margin="16dp"
+                android:maxLines="3"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:ellipsize="end"
+                android:layout_below="@+id/card_image_view"
+                android:fontFamily="@string/font_fontFamily_drawer_item"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@id/card_image_view"
+                android:background="@drawable/black_gradient_background2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_margin="16dp"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:id="@+id/title"
+                android:textColor="@color/white"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+                android:layout_alignBottom="@id/card_image_view"
+                android:layout_height="wrap_content"
+                android:maxLines="2"/>
+        </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>

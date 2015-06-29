@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar" />
+    <style name="calendar_event_style" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#FF6600</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+
+    <style name="dialogue_animation">
+        <item name="android:windowEnterAnimation">
+            @anim/activity_slide_in_left
+        </item>
+        <item name="android:windowExitAnimation">
+            @anim/activity_slide_out_right
+        </item>
+    </style>
+
+
+</resources>

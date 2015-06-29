@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/order_number_pl"
+       android:text="Order:"
+       android:layout_marginBottom="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_number"
+        android:text="190313"
+        android:layout_toRightOf="@id/order_number_pl"
+        android:layout_marginBottom="8dp"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_date_pl"
+        android:text="Date:  "
+        android:layout_below="@id/order_number_pl"
+        android:layout_marginBottom="8dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_date"
+        android:text="23/12/2015"
+        android:layout_toRightOf="@id/order_date_pl"
+        android:layout_below="@id/order_number"
+        android:layout_marginBottom="8dp"
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_status_pl"
+        android:text="Status:  "
+        android:layout_below="@id/order_date_pl"
+        android:layout_marginBottom="8dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/order_status_pl"
+        android:text="Pending"
+        android:id="@+id/order_status"
+        android:layout_below="@id/order_date"
+        android:layout_marginBottom="8dp"/>
+
+
+</RelativeLayout>
