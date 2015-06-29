@@ -21,6 +21,7 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -172,17 +173,17 @@ public class JSONParser {
     }
 
     public JSONObject dhis2HttpRequest(String url, String method, String username, String password, JSONObject obj) {
-
+        InputStream is = null;
         // Making HTTP request
         try {
 
             // check for request method
             if(method == "POST"){
-
                 HttpParams myParams = new BasicHttpParams();
-                HttpConnectionParams.setConnectionTimeout(myParams, 10000);
-                HttpConnectionParams.setSoTimeout(myParams, 10000);
+                HttpConnectionParams.setConnectionTimeout(myParams, 1000000);
+                HttpConnectionParams.setSoTimeout(myParams, 1000000);
                 HttpClient httpclient = new DefaultHttpClient(myParams );
+
                 String json=obj.toString();
                 Log.d(TAG, "string created from json" + json);
 
@@ -208,19 +209,32 @@ public class JSONParser {
                     se.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
                     httppost.setEntity(se);
 
-                    HttpResponse httpResponse = httpclient.execute(httppost);
+
+
+                    HttpResponse httpResponse = null;
+                    try {
+                        System.setProperty("http.keepAlive", "false");
+                        httpResponse = httpclient.execute(httppost);
+                    } catch (ClientProtocolException e1) {
+                        // TODO Auto-generated catch block
+                        e1.printStackTrace();
+                    } catch (IOException e1) {
+                        // TODO Auto-generated catch block
+                        e1.printStackTrace();
+                    }
                     HttpEntity httpEntity = httpResponse.getEntity();
-                    is = httpEntity.getContent();
+                    String jsonString = EntityUtils.toString(httpEntity);
+                    return new JSONObject(jsonString);
+
                 }catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 } catch (ClientProtocolException e) {
-
                 } catch (IOException e) {
-
                 }
 
             }else if(method == "PUT"){
 
+                System.setProperty("http.keepAlive", "false");
                 HttpParams myParams = new BasicHttpParams();
                 HttpConnectionParams.setConnectionTimeout(myParams, 10000);
                 HttpConnectionParams.setSoTimeout(myParams, 10000);
@@ -250,36 +264,56 @@ public class JSONParser {
                     se.setContentEncoding(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
                     httpput.setEntity(se);
 
-                    HttpResponse httpResponse = httpclient.execute(httpput);
+
+
+
+
+                    HttpResponse httpResponse = null;
+                    try {
+                        httpResponse = httpclient.execute(httpput);
+                    } catch (ClientProtocolException e1) {
+                        // TODO Auto-generated catch block
+                        e1.printStackTrace();
+                    } catch (IOException e1) {
+                        // TODO Auto-generated catch block
+                        e1.printStackTrace();
+                    }
                     HttpEntity httpEntity = httpResponse.getEntity();
-                    is = httpEntity.getContent();
+                    String jsonString = EntityUtils.toString(httpEntity);
+                    Log.d(TAG,"received json string = "+jsonString);
+                    return new JSONObject(jsonString);
+
+
+
                 }catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 } catch (ClientProtocolException e) {
-
+                    e.printStackTrace();
                 } catch (IOException e) {
-
+                    e.printStackTrace();
                 }
 
             }else if(method == "GET"){
                 // request method is GET
+                System.setProperty("http.keepAlive", "false");
                 DefaultHttpClient httpClient = new DefaultHttpClient();
                 HttpGet httpGet = new HttpGet(url);
                 String base64EncodedCredentials = "Basic " + Base64.encodeToString(
                         (username + ":" + password).getBytes(),
                         Base64.NO_WRAP);
 
-                Log.d(TAG,"encoded credentials = "+base64EncodedCredentials);
+                Log.d(TAG, "encoded credentials = " + base64EncodedCredentials);
 
                 httpGet.setHeader("Authorization", base64EncodedCredentials);
 
                 httpGet.setHeader("Accept","application/json");
 
                 HttpResponse httpResponse = httpClient.execute(httpGet);
+
                 HttpEntity httpEntity = httpResponse.getEntity();
-                is = httpEntity.getContent();
-
-
+                String jsonString = EntityUtils.toString(httpEntity);
+                Log.d(TAG,"received string = "+jsonString);
+                return new JSONObject(jsonString);
 
             }
 
@@ -304,7 +338,7 @@ public class JSONParser {
             while ((line = reader.readLine()) != null) {
                 sb.append(line + "\n");
             }
-            is.close();
+            reader.close();
             json = sb.toString();
 
         } catch (Exception e) {

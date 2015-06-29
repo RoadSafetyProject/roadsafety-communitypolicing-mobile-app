@@ -275,9 +275,9 @@ public class MainActivity extends ActionBarActivity implements RegistrationDialo
                 protected Void doInBackground(Void... params) {
                     JSONParser jsonParser = new JSONParser();
                     JSONObject object = jsonParser.dhis2HttpRequest(DHIS2Config.BASE_URL + "api/me.json", "GET",username,password,null);
-                    Log.d(TAG,"received = "+object.toString());
                     String id = "";
                     try {
+                        Log.d(TAG,"received = "+object.toString());
                         id=object.getString("id");
                     } catch (JSONException e) {
                         e.printStackTrace();
