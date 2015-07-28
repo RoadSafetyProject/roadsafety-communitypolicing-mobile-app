@@ -200,12 +200,12 @@ public class FragmentAlert extends Fragment  implements RegistrationDialogue.OnC
                         mLong = location.getLongitude();
                         placeName = getAddress(mLat, mLong);
 
-                        File[] files = new File[4];
+                        File[] files = new File[2];
                         try {
                             files[0] = new File(videoPath);
 
                         } catch (Exception e) {
-                            files[0] = new File("");
+                            files[0] = null;
                         }
 
 
@@ -213,7 +213,7 @@ public class FragmentAlert extends Fragment  implements RegistrationDialogue.OnC
                             files[1] = new File(imagePath);
 
                         } catch (Exception e) {
-                            files[1] = new File("");
+                            files[1] = null;
                         }
 
                         UploadFileToServer.execute(files);
@@ -577,16 +577,19 @@ public class FragmentAlert extends Fragment  implements RegistrationDialogue.OnC
         protected void onPostExecute(JSONObject aVoid) {
             super.onPostExecute(aVoid);
             title.setTag(title.getKeyListener());
-            title.setKeyListener((KeyListener)title.getTag());
+            title.setKeyListener((KeyListener) title.getTag());
 
 
             description.setTag(description.getKeyListener());
-            description.setKeyListener((KeyListener)description.getTag());
+            description.setKeyListener((KeyListener) description.getTag());
 
             signupText.setVisibility(View.VISIBLE);
             progressBar.setVisibility(View.GONE);
-            Toast.makeText(getActivity().getApplicationContext(),
-                    "Files uploaded successfully", Toast.LENGTH_LONG).show();
+            if(aVoid!=null)
+                Toast.makeText(getActivity().getApplicationContext(),"Reporting Completed successfully", Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(getActivity().getApplicationContext(),"Reporting Failed", Toast.LENGTH_LONG).show();
+
 
             Log.d(TAG,"video file url = "+urlVideo);
             Log.d(TAG,"image file url = "+urlImage);
@@ -602,6 +605,8 @@ public class FragmentAlert extends Fragment  implements RegistrationDialogue.OnC
 
         @SuppressWarnings("deprecation")
         private JSONObject uploadFile(File sourceFile) {
+            if(sourceFile==null)
+                return null;
             String responseString = null;
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(DHIS2Config.BASE_URL+"dhis-web-reporting/saveDocument.action");

@@ -224,12 +224,15 @@ public class JSONParser {
                     }
                     HttpEntity httpEntity = httpResponse.getEntity();
                     String jsonString = EntityUtils.toString(httpEntity);
+                    Log.d(TAG,"received string = "+jsonString);
                     return new JSONObject(jsonString);
 
                 }catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 } catch (ClientProtocolException e) {
+                    e.printStackTrace();
                 } catch (IOException e) {
+                    e.printStackTrace();
                 }
 
             }else if(method == "PUT"){
@@ -327,7 +330,7 @@ public class JSONParser {
             Log.d(TAG, "IOException = "+e.getMessage());
             e.printStackTrace();
         } catch (Exception ex){
-            Log.d(TAG,"Network exception"+ex.toString());
+            ex.printStackTrace();
         }
 
         try {
